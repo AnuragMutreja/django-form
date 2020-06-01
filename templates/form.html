@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>9eye</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css"  href="{% static 'css/index.css' %}">
+</head>
+<body style="background-color:#f4c2c2;">
+
+<div class="container" >
+    <div class="jumbotron">
+        <h1   >Welcome to IFITMASH/9EYE Website</h1>
+    </div>
+</div>
+
+<div align="center" >
+
+    <form enctype="multipart/form-data" method="POST ">
+    {% csrf_token %}
+        {{ user_form.as_p }}
+    <button type = "submit">submit</button>
+    </form>
+
+</div>
+
+</body>
+</html>
